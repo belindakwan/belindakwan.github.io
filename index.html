@@ -1,470 +1,359 @@
-<?php /* Template Name: Data Visualization Theme - Landing Page */ ?>
-
-
-<!--GOOGLE FONT EMBED-->
-
-<!--font-family: 'Roboto', sans-serif;-->
-<!--font-family: 'Playfair Display', serif;-->
-<!--font-family: 'Oswald', sans-serif;-->
-
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400, 700|Roboto:300|Oswald" rel="stylesheet">
-
-<!-- ELEMENTS -->
-
-<!--mainheader-->
-<!--pageheader-->
-<!--pagetext-->
-<!--bgimage-->
-<!--svg-->
-<!--topnav-->
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--CSS STUFF-->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:300,400,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+
+<!--
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Playfair Display', serif;
+#F800FF
+#00003A
+-->
+
+
 <style>
-
-	/* MAIN */
-    
-    	body {
-  font-family: 'Roboto', sans-serif;
-		background-color: #fff;
-		color:#000;
-		margin:20px;
+body {
+font-family: 'Roboto Condensed', sans-serif;
+font-size:/*15px;*/1.15vw;
+font-weight:300;
+min-height:700px;
+overflow:hidden
 }
-
+.repeat {
+top:8%;
+left:0;
+position:fixed;
+width:24%;
+height:100%;
+background-color:#FFF;
+overflow:hidden;
+font-family: 'Roboto Condensed', sans-serif;
+font-weight:400;
+font-style: italic;
+font-size:/*20px;*/1.65vw;
+color:#F800FF;
+}
+.repeat1 {
+padding-left:10%;
+padding-top:10%;
+padding-right:0;
+position:absolute;
+overflow:auto;
+border-style:solid;
+border-width:0px;
+width:100%
+}
+.stripes1{
+background-image: linear-gradient(90deg, #00003a 10%, #ffffff 10%, #ffffff 50%, #00003a 50%, #00003a 60%, #ffffff 60%, #ffffff 100%);
+background-size: 10.00px 10.00px;
+  width:45%;
+  left:27%;
+  right:23%;
+  height:10%;
+  transform: skew(155deg);
+  position:absolute;
+  
+}
+.stripes2{
+background-image: linear-gradient(90deg, #00003a 10%, #ffffff 10%, #ffffff 50%, #00003a 50%, #00003a 60%, #ffffff 60%, #ffffff 100%);
+background-size: 10.00px 10.00px;
+  width:45%;
+  left:23%;
+  right:27%;
+  height:10%;
+  bottom:0%;
+  transform: skew(155deg);
+  position:absolute;
+  
+}
+h1 {
+font-family: 'Playfair Display', serif;
+font-size:/*20px;*/1.75vw;
+font-weight:400;float:left;
+}
+h2 {
+font-family: 'Playfair Display', serif;
+font-size:/*18px;*/1.5vw;
+font-weight:300;
+}
+h3{
+font-family: 'Roboto Condensed', sans-serif;
+font-size:1.25vw;/*15px;*/;
+font-weight:300;
+font-style:italic
+}
+.content1sidebar a {
+font-family: 'Roboto Condensed', sans-serif;
+font-size:1.15vw;/*15px;*/
+font-weight:300;
+text-decoration:none;
+text-transform:lowercase;
+color:white
+}
+.content2 a {
+font-family: 'Roboto Condensed', sans-serif;
+font-size:1.15vw;/*15px;*/
+font-weight:300;
+text-decoration:underline;
+text-transform:lowercase;
+color:black
+}
+.section1 {
+top:0;
+left:0;
+position:fixed;
+width:22%;
+height:100%;
+overflow:hidden;
+border-style:solid;
+border-color:#F800FF;
+border-width:2px;
+}
+.content1 {
+padding-left:10%;
+padding-top:10%;
+padding-right:0;
+color:black;
+position:absolute;
+overflow:auto;
+border-style:solid;
+border-width:0px;
+width:100%
+}
+.section1sidebar {
+top:0;
+left:0;
+position:fixed;
+width:22%;
+height:100%;
+background-color:#00003A;
+overflow:hidden;
+display:none
+}
+.content1sidebar {
+padding-left:10%;
+padding-top:10%;
+padding-right:0;
+color:white;
+position:absolute;
+overflow:auto;
+border-style:solid;
+border-width:0px;
+width:100%
+}
+.frame2{
+top:0;
+position:fixed;
+left:22%;
+width:45%;
+height:100%;
+background-color:white;
+border-style:solid;
+border-color:red;
+border-width:0px;
+}
+.section2{
+position:absolute;
+width:105%;
+height:100%;
+background-color:white;
+border-style:solid;
+border-color:blue;
+border-width:0px;
+}
+.content2 {
+margin:auto;
+padding-left:10.5%;
+padding-right:15%;
+top:25%;
+bottom:25%;
+height:60%;
+color:black;
+text-align:justify;
+overflow:hidden;
+position:absolute;
+display:block;
+overflow:auto;
+border-style:solid;
+border-width:0px;
+border-color:white;
+}
+.frame3{
+top:0;
+position:fixed;
+left:67%;
+width:33%;
+height:100%;
+background-color:lightblue;
+overflow:hidden;
+min-width:300px
+}
+.section3{
+width:104%;
+height:104%;
+overflow:auto;
+}
+.section3 img{
+width: 101%;
+height: auto;
+position:relative;
+margin:0;
+margin-top:-10px
+}
+.open {
+color:#F800FF;
+font-weight:300;
+/*position:absolute;
+right:10%;
+top:7%;
+z-index:20;*/
+}
+.close {;
+font-weight:300
+/*position:absolute;
+right:10%;
+top:7%;
+z-index:20;*/
+}
 ::-moz-selection { /* Code for Firefox */
     color: ;
-    background: yellow;
+    background: transparent;
 }
-
 ::selection {
     color: ; 
-    background: yellow;
+    background: transparent;
 }
-
-span {
-
-}
-
-hr {
-    
-    width:700%;
-    border-width:0.5px;
-    border-style:solid;
-    border-color:black;
-    	position: fixed;
- 	transform: translate(-50%, -50%) rotate(80deg) ;
-    z-index:3;
-    opacity:0.2;
-    overflow:auto;
-    bottom:200px;
-    left:1200px;
-    
-}
-
-	.landingpage {
-	position: absolute;
- 	top: 50%;
- 	left: 50%;
- 	transform: translate(-50%, -50%);
-    text-align:center;
-    z-index:5;
-    padding-top:10px;
-    margin:0;
-    background-color:transparent;
-    padding-bottom:50px;
-    min-width:500px;
-    Padding:10px
-    overflow:auto;
-    
-   }
-   
-   .landingpagelinks {
-	position: absolute;
- 	top: 50%;
- 	left: 50%;
- 	transform: translate(-50%, -50%);
-    text-align:center;
-    z-index:5;
-    padding-top:200px;
-    line-height:60px;
-    min-width:400px;
-   }
-   
-     .landingpagelinks a{
-          
-        font-family: 'Roboto', sans-serif;
-		color:#000;
-        outline: 0;
-        text-decoration: none;
-        padding-left:15px;
-        padding-right:15px;
-        padding-top:10px;
-         padding-bottom:10px;
-         margin:20px;
-        background: rgba(255, 255, 255, 0.5);
-        border-style:solid;
-        border-width:0.5px;
-
-        
-        }
-        
-        .landingpagelinks a:hover{
-          
-        font-family: 'Roboto', sans-serif;
-			color: transparent;
-		background-color:transparent ;
-        outline: 0;
-        transition:1s;
-        text-decoration: none;
-        border-style:solid;
-        border-width:0.5px;
-        border-color:black;
-        
-        }
-   
-   .bgimage {
-   
-   width:200px;
-   position:fixed;
-   top:200px;
-   right:100px;
-   opacity:0.5;
-   
-   }
-
-        
-        .header a{
-        
-        font-size: 20pt;
-		font-family: 'Playfair Display', serif;
-		color:#000;
-		background-color: ;
-        text-align:center;
-        text-decoration: none;
-        
-
-
-        }
-        
-
-     
-        
-        
-
-
-/* 3Djs CSS*/
-	
-	.link {
-  fill: none;
-  stroke: #666;
-  stroke-width: 0px;
-}
-
-#licensing {
-  fill: none;
-}
-
-#suit {
-  fill: none;
-}
-
-#resolved {
-  fill: none;
-}
-
-
-.link.licensing {
-  stroke: #fff;
-}
-
-.link.resolved {
-  stroke-dasharray: 0,2 1;
-}
-
-circle {
-  fill: transparent;
-  opacity:0.5;
-  stroke: black;
-  stroke-width: 0.2px;
-
-/*#eff9ff*/
-
-}
-
-text {
-  font-style: 'roboto' sans-serif;
-  font-size: 10px;
-  letter-spacing:0px;
-  pointer-events: none;
-  text-transform:uppercase;
-
-}
-
-svg {
-width:100%;
-height:200%;
-overflow:auto;
-float:right;
-z-index:1;
-pointer-events:auto;
-    display: block;
-	position: fixed;
- 	top: 50%;
- 	left: 50%;
- 	transform: translate(-50%, -50%);
-
-}
-
-	.keyword1 {
-		background-color: transparent ;
-		color:#000;
-		top:10%;
-		left:60%;
-		min-width: 200px;
-		max-width: 700px;
-		position:fixed;
-		text-align: center;
-		z-index:-2;
-		font-weight:400;
-		        font-size: 20pt;
-		font-family: 'Playfair Display', serif;
-			color:#000;
-		background-color: ;
-		font-weight:700;
-		width:100%
-	}
-		.keyword2 {
-		background-color: transparent ;
-		color:#000;
-		top:20%;
-		left:5%;
-		min-width: 200px;
-		max-width: 700px;
-		position:fixed;
-		text-align: center;
-		z-index:-2;
-		font-weight:400;
-		        font-size: 20pt;
-		font-family: 'Playfair Display', serif;
-			color:#000;
-		background-color: ;
-		font-weight:700;
-		width:100%
-		
-	}
-			.keyword3 {
-		background-color: transparent ;
-		color:#000;
-		top:90%;
-		left:50%;
-		min-width: 200px;
-		max-width: 700px;
-		position:fixed;
-		text-align: center;
-		z-index:-2;
-		font-weight:400;
-		        font-size: 20pt;
-		font-family: 'Playfair Display', serif;
-			color:#000;
-		background-color: ;
-		font-weight:700;
-		width:100%
-		
-	}
-	
 </style>
 </head>
 <body>
-    
-    
-    <hr>
 
-    <!--landing page body-->
-    
+<div class="repeat">
+<div class="repeat1">
+exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
+<br>exhibitions exhibitions
 
-    
-<div class="landingpage"><span><font class="header"><a href="http://box2021.temp.domains/~belindg4/" style="
-        font-size: 30pt;
-		font-family: 'Playfair Display', serif;
-			color:#000;
-		background-color: ;
-		font-weight:700;
-		width:100%
-        text-align:center;
+</div></div>
+<div class="section1">
+<div class="content1">
+<h1>Belinda 浩恩 Kwan &nbsp;&nbsp;&nbsp;<span class="open">☰</span></h1>
 
-        ;">
-    
-Belinda 浩恩 Kwan</font></a></span>
-<p></p></div>
+</div></div>
 
-<div class="landingpagelinks">
-<a href="http://box2021.temp.domains/~belindg4/about">Enter</a>
+<div class="section1sidebar">
+<div class="content1sidebar">
+<h1>Belinda 浩恩 Kwan &nbsp;&nbsp;&nbsp;<span class="close">☰</span></h1>
+<br></br>
+<br></br>
+<br></br>
+<p><a href="">About</a></P>
+<p><a href="">Exhibitions</a>
+<p><a href="">Writing</a>
+<p><a href="">Research Projects</a>
+<p><a href="">Design</a>
+<p><a href="">CV</a>
+<p><a href="">Contact</a>
+</div></div>
+<div class="frame2">
+<div class="section2">
+<div class="stripes1"></div>
+<div class="content2">
+<h2>Beyond this Promised Land 
+<br><h3>With works by Stephanie Wu & Danika So</h3></h2>
+Fitting in. Commuting. Family homes. My house. Mom & dad. Too far, you forgot I don’t drive?
+Going to church. Going to Kristy’s house down the street. How do you say sex in Cantonese?
+Empty streets. Shoveling snow on the big driveway. I heard your daughter was dating girls.
+Open garage doors. I heard there was no word for it. Playing on the street. Subdivisions.
+Spread out. Residential neighbourhood. Suburban dream. Racism is still that bad? Driving
+everywhere. I’m concerned about her. Let’s go for Dim Sum. Thank god I’m going on vacation,
+away from all this godforsaken snow. Didn’t see you at church today. Why do you need to
+move out if you haven’t gotten married yet? Our neighbourhood is clean and quiet. I’ll get my
+daughter to talk to yours. Heard it through the grapevine. Where’d she get accepted to
+university? Oh she’s going away? 叻女 (translation: good/independent/intelligent girl, or slang
+for lesbian). Honey, we’re middle class. Oh my god, Starbucks is the classic Markham hang-out
+spot. You’re the suburban queen. I’m at my friend’s downtown, I can’t stand being in that
+suburban apartment. I can’t. I don’t understand people who stay at home - I need to fucking
+move out. I live my own life now. 性 (translation: sex). Oh shit, that’s my vibrator on the table,
+sorry.
+
+<p><a href="https://www.w3schools.com/code/tryit.asp?filename=FTEJI1J840Y6">Exhibition Publication (Download PDF)</a>
+
+
+
+</div><div class="stripes2"></div></div></div>
+<div class="frame3">
+<div class="section3">
+<div class="content3">
+<img src="https://format-com-cld-res.cloudinary.com/image/private/s--U48LyV66--/c_limit,g_center,h_550,w_65535/a_auto,fl_keep_iptc.progressive,q_95/v1/43d0c701a29aa6af9229c5917df0e61c/15.jpg?733">
+<img src="https://format-com-cld-res.cloudinary.com/image/private/s--U48LyV66--/c_limit,g_center,h_550,w_65535/a_auto,fl_keep_iptc.progressive,q_95/v1/43d0c701a29aa6af9229c5917df0e61c/15.jpg?733">
+<img src="https://format-com-cld-res.cloudinary.com/image/private/s--U48LyV66--/c_limit,g_center,h_550,w_65535/a_auto,fl_keep_iptc.progressive,q_95/v1/43d0c701a29aa6af9229c5917df0e61c/15.jpg?733">
+<img src="https://format-com-cld-res.cloudinary.com/image/private/s--U48LyV66--/c_limit,g_center,h_550,w_65535/a_auto,fl_keep_iptc.progressive,q_95/v1/43d0c701a29aa6af9229c5917df0e61c/15.jpg?733">
+<img src="https://format-com-cld-res.cloudinary.com/image/private/s--U48LyV66--/c_limit,g_center,h_550,w_65535/a_auto,fl_keep_iptc.progressive,q_95/v1/43d0c701a29aa6af9229c5917df0e61c/15.jpg?733">
+
+</div>
+</div>
 </div>
 
-
-<div class="keyword1">curating</div>
-<div class="keyword2">art writing</div>
-<div class="keyword3">& research</div>
-
-
-<!--SEARCH FUNCTION-->
-
-
-	<!--3DJS SCRIPTS-->
-    
-   <!-- licensing/english to chinese (green arrow)-->
-    <!--suit/chinese to english (black arrow)-->
-   <!--resolved (dotted arrow)-->
-	
-    
-	<script src="//d3js.org/d3.v3.min.js"></script>
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-
-// http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
-var links = [
-
-  
-  {source: "Curator", target: "藝術館長", type: "resolved"},
-  {source: "Arts Administrator", target: "藝術管理員", type: "resolved"},
-  {source: "Toronto, ON", target: "多倫多", type: "resolved"},
-  {source: "Researcher", target: "學術研究員", type: "resolved"},
-  {source: "Writer", target: "作家", type: "resolved"},
-  
-  {source: "Researcher", target: "學術研究員", type: "resolved"},
-  {source: "Researcher", target: "Social History", type: "licensing"},
-  {source: "Researcher", target: "Institutional Critique", type: "licensing"},
-  {source: "Researcher", target: "New Media", type: "licensing"},
-  {source: "Researcher", target: "Modern & Contemporary Art", type: "licensing"},
-  {source: "Researcher", target: "Data Visualization", type: "licensing"},
-  {source: "Researcher", target: "Race & Gender Studies", type: "licensing"},
-  
-  {source: "Art", target: "藝術", type: "resolved"},
-  {source: "New Media", target: "新媒體", type: "resolved"},
-  {source: "Cultural Translation", target: "文化翻譯", type: "resolved"},
-  
-  {source: "學術研究員", target: "藝術", type: "licensing"},
-  {source: "學術研究員", target: "社會正義", type: "licensing"},
-  {source: "學術研究員", target: "新媒體", type: "licensing"},
-  {source: "學術研究員", target: "文化翻譯", type: "licensing"},
-  
-  
-
-  
-
-];
-
-var nodes = {};
-
-// Compute the distinct nodes from the links.
-links.forEach(function(link) {
-  link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
-  link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
-});
-
-var width = 1000,
-    height = 2000;
-
-var force = d3.layout.force()
-    .nodes(d3.values(nodes))
-    .links(links)
-    .size([width, height])
-    .linkDistance(500)
-    .charge(-3000)
-    .on("tick", tick)
-    .start();
-
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-// Per-type markers, as they don't inherit styles.
-svg.append("defs").selectAll("marker")
-    .data(["suit", "licensing", "resolved"])
-  .enter().append("marker")
-    .attr("id", function(d) { return d; })
-    .attr("viewBox", "0 -5 10 10")
-    .attr("refX", 15)
-    .attr("refY", -1.5)
-    .attr("markerWidth", 20)
-    .attr("markerHeight", 6)
-    .attr("orient", "auto")
-  .append("path")
-    .attr("d", "M0,-5L10,0L0,5");
-
-var path = svg.append("g").selectAll("path")
-    .data(force.links())
-  .enter().append("path")
-    .attr("class", function(d) { return "link " + d.type; })
-    .attr("marker-end", function(d) { return "url(#" + d.type + ")"; });
-
-var circle = svg.append("g").selectAll("circle")
-    .data(force.nodes())
-  .enter().append("circle")
-    .attr("r", 180)
-    .call(force.drag);
-
-var text = svg.append("g").selectAll("text")
-    .data(force.nodes())
-  .enter().append("text")
-    .attr("x", -38)
-    .attr("y", ".31em")
-    .text(function(d) { return d.name; });
-
-// Use elliptical arc path segments to doubly-encode directionality.
-function tick() {
-  path.attr("d", linkArc);
-  circle.attr("transform", transform);
-  text.attr("transform", transform);
-}
-
-function linkArc(d) {
-  var dx = d.target.x - d.source.x,
-      dy = d.target.y - d.source.y,
-      dr = Math.sqrt(dx * dx + dy * dy);
-  return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
-}
-
-function transform(d) {
-  return "translate(" + d.x + "," + d.y + ")";
-}
-
-</script>
-
-
-<!--body fade-->
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-<script>(function($) {
-$.fn.pagefade = function(fadein, fadeout) {
-        this.css("display", "none");
-        this.fadeIn(fadein);
-  $("").click(function(event) {
-event.preventDefault();
-linkLocation = this.href;
-this.fadeOut(fadeout, redirectPage);
-  });
-  function redirectPage() {
-window.location.disabled= linkLocation;
-  }
-  return this;
-};
-}(jQuery));</script>
-
-<script>
-$(document).ready(function() { 
-$("html, body").pagefade(1000, 1000); 
+$(document).ready(function(){
+    $(".close").click(function(){
+        $(".section1sidebar").fadeOut(100);
+    });
 });
 </script>
-	
-	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".open").click(function(){
+        $(".section1sidebar").fadeIn(100);
+    });
+});
+</script>
+
+
 </body>
 </html>
-
-
